@@ -2,11 +2,11 @@ import React from "react";
 import Nav from "@/components/Nav";
 import Head from "next/head";
 
-function aboutus() {
+function AboutUs() {
   return (
     <>
       <Head>
-        <title>About us | NEXTGEN Patients</title>
+        <title>About us | AuraBuena</title>
         <meta
           name="description"
           content="Get Consultation from the comfort of your own home"
@@ -47,4 +47,4 @@ function aboutus() {
   );
 }
 
-export default aboutus;
+export default AboutUs;

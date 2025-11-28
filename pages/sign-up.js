@@ -20,25 +20,21 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     setLoading(true);
     setErrorMessage("");
     const name = firstName + " " + lastName;
 
-    const promise = accountClient.create(ID.unique(), email, password, name);
-
-    promise.then(
-      function (response) {
-        accountClient.createEmailSession(email, password);
-        router.push("/home");
-      },
-      function (error) {
-        console.log(error);
-        setLoading(false);
-        setErrorMessage(error.message);
-      }
-    );
+    try {
+      await accountClient.create(ID.unique(), email, password, name);
+      await accountClient.createEmailSession(email, password);
+      router.push("/home");
+    } catch (error) {
+      console.error("Signup error:", error);
+      setLoading(false);
+      setErrorMessage(error.message || "Registration failed");
+    }
   };
 
   useEffect(() => {

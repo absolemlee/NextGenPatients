@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>NEXTGEN Patients</title>
+        <title>AuraBUENA</title>
         <meta
           name="description"
-          content="Get Consultation from the comfort of your own home"
+          content="Holistic care and spiritual support"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -32,13 +32,13 @@ export default function Home() {
 
             <div className="flex flex-col space-y-6 text-black xl:basis-1/2 dark:text-white">
               <h1 className="w-full text-4xl text-center xl:text-6xl xl:text-left">
-                Get Medical Consultation from Home
+                AuraBUENA Holistics
               </h1>
 
               <p className="w-full max-w-lg text-xl text-center xl:text-left dark:text-gray-400">
                 Welcome to{" "}
-                <span className="text-[#2A9988]">NextGen Doctors</span> where
-                you can receive medical care from the comfort of your own home.
+                <span className="text-[#2A9988]">My AuraBUENA</span> where
+                you can receive spiritual care and holistic support with competence and love.
               </p>
 
               <div className="flex items-center gap-4">
@@ -71,15 +71,15 @@ export default function Home() {
               className="flex flex-col items-center w-full px-6 sm:px-20 scroll-mt-6"
             >
               <h1 className="w-full text-3xl text-center">
-                Expert Care from Trusted Medical Professionals
+                Expert Care from Certified Spiritual Professionals
               </h1>
               <br />
               <p className="w-full max-w-lg text-base text-center xl:text-lg sm:font-normal">
-                Our medical professionals undergo a rigorous screening and
+                Our spiritual professionals undergo a rigorous screening and
                 selection process before they join our team. When you receive an
-                online medical consultation through our service, you can trust
-                that you&apos;re getting expert advice and guidance from a
-                qualified medical professional.
+                holistic consultation through our service, you can trust
+                that you&apos;re receiving competent support and guidance from a
+                an ordained and certified spiritual professional.
               </p>
             </div>
           </div>
@@ -102,20 +102,20 @@ export default function Home() {
             <ul className="z-10 grid grid-cols-1 gap-10 px-5 md:grid-cols-2 xl:grid-cols-3 sm:px-20 ">
               <div className="space-y-1">
                 <li className="text-xl">
-                  How do I sign up for an online medical consultation?
+                  How do I sign up for holistic care?
                 </li>
                 <li className="text-sm font-light">
                   Signing up is easy! Simply create an account on our website
                   and provide some basic information about yourself. Once
                   you&apos;ve created an account, you can schedule a
-                  consultation with one of our medical professionals at a time
+                  consultation with one of our spiritual professionals at a time
                   that&apos;s convenient for you.
                 </li>
               </div>
 
               <div className="space-y-1">
                 <li className="text-xl">
-                  How do I pay for my online medical consultation?
+                  How do I pay for my spiritual care and holistic support?
                 </li>
                 <li className="text-sm font-light">
                   We accept a variety of payment methods, including debit cards,
@@ -126,11 +126,11 @@ export default function Home() {
 
               <div className="space-y-1">
                 <li className="text-xl">
-                  Is my personal and medical information secure?
+                  Is my personal and spiritual information secure?
                 </li>
                 <li className="text-sm font-light">
                   Yes! We take the security and privacy of your personal and
-                  medical information very seriously.
+                  spiritual information very seriously.
                 </li>
               </div>
 

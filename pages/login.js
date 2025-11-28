@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaMoon, FaSun } from "react-icons/fa";
 import { accountClient } from "@/appWrite-client/settings.config";
+import { getCurrentUserProfile, getRoleBasedRedirect } from "@/appWrite-client/auth-helpers";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,24 +18,25 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setErrorMessage("");
 
-    const promise = accountClient.createEmailSession(email, password);
-
-    promise.then(
-      function (response) {
-        router.push("/home");
-        return response;
-      },
-      function (error) {
-        console.log(error);
-        setLoading(false);
-        setErrorMessage(error.message);
-      }
-    );
+    try {
+      await accountClient.createEmailSession(email, password);
+      
+      // Get user profile and redirect based on role
+      const userProfile = await getCurrentUserProfile();
+      const redirectPath = getRoleBasedRedirect(userProfile.role);
+      
+      console.log("User role:", userProfile.role, "Redirecting to:", redirectPath);
+      router.push(redirectPath);
+    } catch (error) {
+      console.error("Login error:", error);
+      setLoading(false);
+      setErrorMessage(error.message || "Network request failed");
+    }
   };
 
   useEffect(() => {

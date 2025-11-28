@@ -96,10 +96,10 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Home | NEXTGEN Patients</title>
+        <title>Home | AuraBUENA</title>
         <meta
           name="description"
-          content="Get Consultation from the comfort of your own home"
+          content="Holistic care and spiritual support"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -150,7 +150,7 @@ const Home = () => {
               size="large"
               onChange={(e) => onSearch(e)}
               prefix={prefix}
-              placeholder="Search for Doctors"
+              placeholder="Search for Providers"
               className="w-full px-4 text-lg border border-green-600 rounded-lg lg:w-2/3 md:w-2/3 sm:p-4 sm:px-4 searchDoc"
             />
           </div>
@@ -164,7 +164,7 @@ const Home = () => {
               data-testid="find-txt"
               className="font-bold text-2xl md:text-3xl lg:text-5xl text-[#2A9988] text-center"
             >
-              Find your Doctor
+              Find your Provider
             </h1>
 
             <div className="grid grid-cols-4 text-black gap-x-2 gap-y-6 h-fit lg:grid-cols-6 md:gap-6 lg:gap-8 xl:gap-10 dark:text-white">
@@ -199,7 +199,7 @@ const Home = () => {
         <div className="w-full flex flex-col items-start justify-center bg-[#2A9988] text-white px-4 overflow-auto grow">
           <div className="flex flex-row items-center justify-between w-full py-8 overflow-hidden">
             <h1 className="font-semibold md:text-2xl lg:text-4xl">
-              Our Doctors
+              Our Providers
             </h1>
 
             <Link
